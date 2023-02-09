@@ -21,9 +21,12 @@ int main()
         //resetting the sum num to 0
         sumNum = 0;
     }
-    auto maxNum =  max_element(sum.begin(),sum.end());
-    auto minNum = min_element(sum.begin(),sum.end());
-    //NOTE: USE *varibale because you cant cout a long int
-    cout << *minNum << " " <<*maxNum <<endl;
+    /*NOTE: use * with max_element and min_element
+    max_element and min_element return an iterator pointing to the element
+    To access the actual value of the element, you need to derefrence the iterator with *
+    */
+    auto maxNum =  *max_element(sum.begin(),sum.end());
+    auto minNum = *min_element(sum.begin(),sum.end());
+    cout << minNum << " " <<maxNum <<endl;
     return 0;
 }
